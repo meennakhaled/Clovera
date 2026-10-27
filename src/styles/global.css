@@ -1,0 +1,63 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--white);
+  overflow-x: hidden;
+}
+img, svg { max-width: 100%; }
+img { display: block; }
+h1, h2, p { margin: 0; }
+a { color: inherit; }
+button, input { font: inherit; }
+
+:focus-visible { outline: 2px solid var(--green-900); outline-offset: 3px; }
+
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  padding: 10px 16px; border-radius: 999px;
+  background: var(--green-900); color: #fff; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 0 28px;
+  border: 1px solid var(--green-900); border-radius: 999px;
+  font-size: 0.9375rem; font-weight: 400; line-height: 1.2;
+  text-decoration: none; cursor: pointer;
+  transition: background-color var(--ease), color var(--ease), border-color var(--ease);
+}
+.btn--primary { background: var(--green-900); color: #fff; }
+.btn--primary:hover:not(:disabled) { background: var(--green-950); }
+.btn--outline { background: #fff; color: var(--ink); }
+.btn--outline:hover:not(:disabled) { background: var(--sage-soft); }
+.btn--block { width: 100%; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.spinner {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid currentColor; border-right-color: transparent;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Toast */
+.toast-region {
+  position: fixed; left: 0; right: 0; bottom: 24px; z-index: 50;
+  display: flex; justify-content: center; padding: 0 16px; pointer-events: none;
+}
+.toast {
+  max-width: 440px; padding: 12px 20px; border-radius: 16px;
+  background: var(--green-900); color: #fff; font-size: 0.875rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

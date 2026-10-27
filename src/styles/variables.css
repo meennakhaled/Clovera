@@ -1,0 +1,17 @@
+:root {
+  --green-900: #2f5a2b;
+  --green-950: #244a21;
+  --sage: #7b994a;
+  --sage-soft: #eef3e4;
+  --ink: #111111;
+  --muted: #6f6f6f;
+  --placeholder: #8c8c8c;
+  --danger: #b3261e;
+  --white: #ffffff;
+
+  --font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --header-h: 88px;
+  --page-pad: clamp(20px, 4.2vw, 60px);
+  --field-h: 48px;
+  --ease: 200ms ease;
+}
