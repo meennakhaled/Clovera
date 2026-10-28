@@ -1,0 +1,6 @@
+@Clovera.Api_HostAddress = http://localhost:5081
+
+GET {{Clovera.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
